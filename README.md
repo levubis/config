@@ -25,16 +25,16 @@ Add repo
  gpgkey = file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rpmforge-dag  
  gpgcheck = 0  
  
-# yum install suphp -y
+yum install suphp -y
 
 Tuy nhiên trước đó nếu các bạn chưa cài đặt php, apache và mysql thì các bạn cần chạy lệnh sau đây để cài đặt đầy đủ các thành phần.
 
-# yum install httpd mysql-server php-ZendFramework-full -y
-
+yum install httpd mysql-server php-ZendFramework-full -y
 Tiếp theo các bạn chỉnh sửa file /etc/httpd/conf.d/suphp.conf , xóa hết các dòng hiện có và chỉ để lại hai dòng sau đây
 
- LoadModule suphp_module modules/mod_suphp.so  
- suPHP_Engine off  
+LoadModule suphp_module modules/mod_suphp.so  
+suPHP_Engine off  
+
 Sau đó các bạn tiếp tục chỉnh sửa file /etc/suphp.conf , thêm dấu ” và ” vào trong 2 dòng config cuối cùng sau dấu =, cụ thể là sau khi chỉnh sửa sẽ trông như thế này
 
  [handlers]  
